@@ -29,17 +29,23 @@ uncropped page — a page is never dropped from the output.
 
 ## Usage
 
-1. Open the notebook in Colab (badge above).
-2. Run the cells in order. You'll be prompted to upload a PDF.
-3. The merged PDF is saved as `<input filename>_merged.pdf` and offered as
-   a download at the end.
+The notebook is two collapsed form cells — no code to read or edit unless you
+want to:
 
-Re-running the upload cell in the same session automatically cleans up the
-previous input/output files first.
+1. Open the notebook in Colab (badge above).
+2. Run **Step 1: Setup** once per session (installs dependencies, defines
+   the pipeline).
+3. Run **Step 2: Upload a PDF, merge, and download** — it prompts you to
+   upload a PDF, then automatically crops, merges, shows a preview, and
+   downloads the result as `<input filename>_merged.pdf`.
+
+To process another PDF, just run Step 2 again — it cleans up the previous
+input/output files first. Click the ▸ arrow on a cell's title to expand it
+if you want to see or tweak the code (e.g. `A4_ORIENTATION`).
 
 ## Configuration
 
-Key options are set as variables near the top of the processing cell:
+Key options are set as variables near the top of the Step 1 cell:
 
 | Variable | Default | Purpose |
 |---|---|---|
